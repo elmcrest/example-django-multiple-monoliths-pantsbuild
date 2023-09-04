@@ -6,4 +6,7 @@ python_requirements(
 
 python_test_utils(
     name="test_utils",
+    dependencies=[
+        "edmmp",  # For settings.py.
+    ],
 )
