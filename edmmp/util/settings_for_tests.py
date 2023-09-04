@@ -11,6 +11,9 @@ from django.conf import settings
 
 def configure_settings(apps: list[str]) -> None:
     """Minimal settings for unittests."""
+    # import pdb
+
+    # pdb.set_trace()
     settings.configure(
         TIME_ZONE="UTC",
         USE_TZ=True,
@@ -24,4 +27,5 @@ def configure_settings(apps: list[str]) -> None:
                 ),
             }
         },
+        ROOT_URLCONF="service_a.app_a.urls",
     )

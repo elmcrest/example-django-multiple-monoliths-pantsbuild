@@ -1,6 +1,6 @@
 # Copyright 2021 Pants project contributors.
 # Licensed under the Apache License, Version 2.0 (see LICENSE).
 
-from edmmp.util.settings_for_tests import configure_settings
+from util.settings_for_tests import configure_settings
 
-configure_settings(["app_a"])
+configure_settings(["service_a.app_a"])

@@ -4,7 +4,7 @@ pants_version = "2.17.0"
 backend_packages = ["pants.backend.python"]
 
 [source]
-root_patterns = ["edmmp/service_a", "edmmp/util"]
+root_patterns = ["/edmmp"]
 
 [python]
 interpreter_constraints = ["==3.11.*"]
@@ -16,3 +16,6 @@ edmmp = "3rdparty/python/edmmp"
 
 [python-infer]
 use_rust_parser = true
+# Infer dependencies from strings that look like module/class names, such as are often
+# found in settings.py, where dependencies are enumerated as strings and not directly imported.
+string_imports = true
