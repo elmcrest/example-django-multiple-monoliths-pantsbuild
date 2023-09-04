@@ -9,10 +9,10 @@ from tempfile import mkdtemp
 from django.conf import settings
 
 
-def configure_settings(apps: list[str]) -> None:
+def configure_settings(apps: list[str], url_module: str) -> None:
     """Minimal settings for unittests."""
     # import pdb
-
+    # urlconf = f"{apps[0]}.urls"
     # pdb.set_trace()
     settings.configure(
         TIME_ZONE="UTC",
@@ -27,5 +27,5 @@ def configure_settings(apps: list[str]) -> None:
                 ),
             }
         },
-        ROOT_URLCONF="service_a.app_a.urls",
+        ROOT_URLCONF=url_module,
     )

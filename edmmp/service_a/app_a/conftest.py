@@ -3,4 +3,4 @@
 
 from util.settings_for_tests import configure_settings
 
-configure_settings(["service_a.app_a"])
+configure_settings(["service_a.app_a"], "service_a.app_a.urls")
