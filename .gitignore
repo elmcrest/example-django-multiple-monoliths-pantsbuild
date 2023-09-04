@@ -1,0 +1,9 @@
+# Pants workspace files
+/.pants.*
+/dist/
+/.pids
+
+.vscode
+__pycache__
+
+db.sqlite3
