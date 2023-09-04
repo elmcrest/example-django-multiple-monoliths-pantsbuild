@@ -5,6 +5,7 @@ backend_packages = ["pants.backend.python"]
 
 [source]
 root_patterns = ["edmmp/service_a", "edmmp/util"]
+# root_patterns = ["*"]
 
 [python]
 interpreter_constraints = ["==3.11.*"]
@@ -12,7 +13,17 @@ enable_resolves = true
 default_resolve = "edmmp"
 
 [python.resolves]
-edmmp = "3rdparty/python/edmmp"
+edmmp = "3rdparty/python/edmmp-lock.txt"
+service_a = "3rdparty/python/service_a-lock.txt"
+pytest = "3rdparty/python/pytest-lock.txt"
+
+[pytest]
+install_from_resolve = "pytest"
 
 [python-infer]
 use_rust_parser = true
+
+# [pytest]
+# extra_requirements.add = ["pytest-django"]
+
+# execution_slot_var = "PANTS_EXECUTION_SLOT"
