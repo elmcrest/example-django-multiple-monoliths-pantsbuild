@@ -1,6 +1,4 @@
-python_sources(
-    resolve="service_a"
-)
+python_sources()
 
 python_requirements(
     name="reqs",
